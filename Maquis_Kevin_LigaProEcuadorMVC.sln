@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maquis_Kevin_LigaProEcuadorMVC", "Maquis_Kevin_LigaProEcuadorMVC\Maquis_Kevin_LigaProEcuadorMVC.csproj", "{6E410108-3FD4-4FA3-A1CB-72B8F25D57E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E410108-3FD4-4FA3-A1CB-72B8F25D57E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E410108-3FD4-4FA3-A1CB-72B8F25D57E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E410108-3FD4-4FA3-A1CB-72B8F25D57E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E410108-3FD4-4FA3-A1CB-72B8F25D57E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BB9D439-0F54-475F-A48A-AFEB55CE16B1}
+	EndGlobalSection
+EndGlobal

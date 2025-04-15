@@ -9,7 +9,7 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Controllers
         public IActionResult ListaEquipos()
         {
             EquipoRepositorio repositorio = new EquipoRepositorio();
-            var equipos = repositorio.DevuelveListaRepositorio();  
+            var equipos = repositorio.DevuelveListadoEquipos();  
             return View(equipos);
         }
             

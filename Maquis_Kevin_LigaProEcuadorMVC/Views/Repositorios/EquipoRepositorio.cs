@@ -1,11 +1,26 @@
-﻿using Maquis_Kevin_LigaProEcuadorMVC.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Maquis_Kevin_LigaProEcuadorMVC.Interfaces;
+using Maquis_Kevin_LigaProEcuadorMVC.Models;
 
 namespace Maquis_Kevin_LigaProEcuadorMVC.Views.Repositorios
 {
-    public class EquipoRepositorio
+    public class EquipoRepositorio : IEquipoRepository
     {
-        public List<Equipo> DevuelveListaRepositorio()
+        public bool ActualizarEquipo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool CrearEquipo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Equipo DevuelveInfoEquipoPorID()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Equipo> DevuelveListadoEquipos()
         {
             List<Equipo> equipos = new List<Equipo>();
             Equipo LDU = new Equipo()
@@ -42,6 +57,11 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Views.Repositorios
             equipos.Add(Emelec);
 
             return equipos;
+        }
+
+        public bool EliminarEquipo()
+        {
+            throw new NotImplementedException();
         }
     }
 }

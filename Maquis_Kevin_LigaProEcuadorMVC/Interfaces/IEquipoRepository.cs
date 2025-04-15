@@ -2,13 +2,12 @@
 
 namespace Maquis_Kevin_LigaProEcuadorMVC.Interfaces
 {
-    public interface IEquipoRespository
+    public interface IEquipoRepository
     {
-        List<Equipo> DevuelevListadoEquipos();
-        Equipo DevuelveInfoEquipo();
+        List<Equipo> DevuelveListadoEquipos();
+        Equipo DevuelveInfoEquipoPorID();
         bool CrearEquipo();
+        bool ActualizarEquipo();
         bool EliminarEquipo();
-
     }
 }
-

@@ -37,6 +37,6 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Models
             }
         }
         public required string LOGOUrl { get; set; } // Se uso la inteligencia artificial apra aplicar lo del logo
-
+        public string? Descripcion { get; set; } 
     }
 }

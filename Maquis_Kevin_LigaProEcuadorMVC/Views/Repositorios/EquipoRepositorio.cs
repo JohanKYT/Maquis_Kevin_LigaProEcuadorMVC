@@ -15,9 +15,11 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Views.Repositorios
             throw new NotImplementedException();
         }
 
-        public Equipo DevuelveInfoEquipoPorID()
+        public Equipo DevuelveInfoEquipoPorID(int ID)
         {
-            throw new NotImplementedException();
+            var equipos = DevuelveListadoEquipos();
+            var equipo = equipos.Where(item => item.ID == ID).First();
+            return equipo;
         }
 
         public List<Equipo> DevuelveListadoEquipos()

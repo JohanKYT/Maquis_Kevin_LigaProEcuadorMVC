@@ -43,7 +43,7 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Views.Repositorios
             new Equipo
             {
                 ID = 1,
-                Nombre = "LDU (Liga De Quito",
+                Nombre = "LDU (Liga De Quito)",
                 PartidosGanados = 5,
                 PartidosEmpatados = 3,
                 PartidosPerdidos = 2,

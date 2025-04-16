@@ -21,14 +21,15 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Controllers
         }
         public IActionResult Edit(int ID)
         {
-            Equipo LDU = new Equipo
+            Equipo LDU = new Equipo()
             {
                 ID = 1,
                 Nombre = "LDU",
                 PartidosJugados = 10,
                 PartidosGanados = 5,
                 PartidosEmpatados = 3,
-                PartidosPerdidos = 2
+                PartidosPerdidos = 2,
+                LOGOUrl = "https://upload.wikimedia.org/wikipedia/commons/e/e0/Liga_Deportiva_Universitaria_de_Quito.png"
             };
             return View(LDU);
 
@@ -39,18 +40,20 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Controllers
                 PartidosJugados = 10,
                 PartidosGanados = 6,
                 PartidosEmpatados = 2,
-                PartidosPerdidos = 2
+                PartidosPerdidos = 2,
+                LOGOUrl = "https://upload.wikimedia.org/wikipedia/commons/6/6a/Barcelona_Sporting_Club_Logo.png"
             };
             return View(Barcelona);
 
             Equipo Emelec = new Equipo
             {
-                ID = 2,
+                ID = 3,
                 Nombre = "Emelec",
                 PartidosJugados = 10,
                 PartidosGanados = 4,
                 PartidosEmpatados = 4,
-                PartidosPerdidos = 2
+                PartidosPerdidos = 2,
+                LOGOUrl = "https://upload.wikimedia.org/wikipedia/commons/d/d8/Escudo_del_Club_Sport_Emelec.svg"
             };
             return View(Emelec);
 

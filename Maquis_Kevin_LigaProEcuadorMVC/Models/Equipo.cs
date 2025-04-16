@@ -29,7 +29,7 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Models
                 return puntos;
             }
         }
-
+        public required string LOGOUrl { get; set; } // Se uso la inteligencia artificial apra aplicar lo del logo
 
     }
 }

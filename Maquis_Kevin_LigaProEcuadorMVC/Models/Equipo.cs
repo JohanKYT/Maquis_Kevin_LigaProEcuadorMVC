@@ -12,9 +12,16 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Models
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         //public string? Nombre { get; set; } : "?" Significa que puede ser nulo
         public string Nombre { get; set; }
-        [Range(0,20)]
-        public int PartidosJugados { get; set; }
         [Range(0, 20)]
+        public int PartidosJugados
+        {
+            get
+            {
+                int partidosGanados = PartidosGanados + PartidosEmpatados + PartidosPerdidos;
+                return partidosGanados;
+            }
+        }
+        [Range(0, 100)]
         public int PartidosGanados { get; set; }
         [Range(0, 20)]
         public int PartidosEmpatados { get; set; }

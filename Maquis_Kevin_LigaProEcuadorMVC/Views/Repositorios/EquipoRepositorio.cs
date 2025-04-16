@@ -5,9 +5,21 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Views.Repositorios
 {
     public class EquipoRepositorio : IEquipoRepository
     {
-        public bool ActualizarEquipo()
+        public bool ActualizarEquipo(int ID, Equipo equipoActualizado)
         {
-            throw new NotImplementedException();
+            var equipos = DevuelveListadoEquipos();
+            var equipoExistente = equipos.FirstOrDefault(item => item.ID == ID);
+
+            if (equipoExistente != null)
+            {
+                equipoExistente.PartidosGanados = equipoActualizado.PartidosGanados;
+                equipoExistente.PartidosEmpatados = equipoActualizado.PartidosEmpatados;
+                equipoExistente.PartidosPerdidos = equipoActualizado.PartidosPerdidos;
+                // PartidosJugados y Puntos se calculan automáticamente
+                return true;
+            }
+
+            return false;
         }
 
         public bool CrearEquipo()
@@ -24,46 +36,38 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Views.Repositorios
 
         public List<Equipo> DevuelveListadoEquipos()
         {
-            List<Equipo> equipos = new List<Equipo>();
-            Equipo LDU = new Equipo()
+            return equipos;
+        }
+        private static List<Equipo> equipos = new List<Equipo>()
+        {
+            new Equipo
             {
                 ID = 1,
                 Nombre = "LDU",
-                PartidosJugados = 10,
                 PartidosGanados = 5,
                 PartidosEmpatados = 3,
                 PartidosPerdidos = 2,
                 LOGOUrl = "https://upload.wikimedia.org/wikipedia/commons/e/e0/Liga_Deportiva_Universitaria_de_Quito.png"
-            };
-            equipos.Add(LDU);
-
-            Equipo Barcelona = new Equipo()
+            },
+            new Equipo
             {
                 ID = 2,
                 Nombre = "Barcelona",
-                PartidosJugados = 10,
                 PartidosGanados = 6,
                 PartidosEmpatados = 2,
                 PartidosPerdidos = 2,
                 LOGOUrl = "https://upload.wikimedia.org/wikipedia/commons/6/6a/Barcelona_Sporting_Club_Logo.png"
-            };
-            equipos.Add(Barcelona);
-
-            Equipo Emelec = new Equipo()
+            },
+            new Equipo
             {
                 ID = 3,
                 Nombre = "Emelec",
-                PartidosJugados = 10,
                 PartidosGanados = 4,
                 PartidosEmpatados = 4,
                 PartidosPerdidos = 2,
                 LOGOUrl = "https://upload.wikimedia.org/wikipedia/commons/d/d8/Escudo_del_Club_Sport_Emelec.svg"
-            };
-            equipos.Add(Emelec);
-
-            return equipos;
-        }
-
+            }
+        };
         public bool EliminarEquipo()
         {
             throw new NotImplementedException();

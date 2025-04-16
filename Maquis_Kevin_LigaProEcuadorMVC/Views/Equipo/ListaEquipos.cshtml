@@ -5,10 +5,9 @@
 }
 
 <h1>ListaEquipos</h1>
-
-<p>
+<!--<p>
     <a asp-action="btn btn-info"Create">Create New</a>
-</p>
+</p>-->
 <table class="table">
     <thead>
         <tr>
@@ -61,9 +60,7 @@
                 @Html.DisplayFor(modelItem => item.Puntos)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.ID }, new { @class = "btn btn-success"} ) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-info" }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("Informacion del equipo", "Details", new { id = item.ID }, new { @class = "btn btn-info" }) |
             </td>
         </tr>
 }

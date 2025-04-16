@@ -24,7 +24,24 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Controllers
             EquipoRepositorio repositorio = new EquipoRepositorio();
             var equipos = repositorio.DevuelveInfoEquipoPorID(ID);
             return View(equipos);
+
         }
+        //Esto se uso inteligencia artificial para poder guardar correctamente los nuevos datos de los equipos
+        [HttpPost]
+        public IActionResult Edit(Equipo equipo)
+        {
+            EquipoRepositorio repositorio = new EquipoRepositorio();
+            var actualizado = repositorio.ActualizarEquipo(equipo.ID, equipo);
+
+            if (actualizado)
+            {
+                return RedirectToAction("ListaEquipos");
+            }
+
+            // En caso de error, vuelve a mostrar el formulario con el modelo
+            return View(equipo);
+        }
+        
     }
 }
 

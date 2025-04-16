@@ -78,6 +78,7 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Views.Repositorios
                 "Juega en el estadio George Capwell, un ícono del deporte en Ecuador."
             }
         };
+        //Se uso inteligencia artificial para poder crear el logo y la descripcion de los equipos
         public bool EliminarEquipo()
         {
             throw new NotImplementedException();

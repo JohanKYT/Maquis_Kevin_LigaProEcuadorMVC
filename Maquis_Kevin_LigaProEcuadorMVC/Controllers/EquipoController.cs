@@ -33,29 +33,9 @@ namespace Maquis_Kevin_LigaProEcuadorMVC.Controllers
             };
             return View(LDU);
 
-            Equipo Barcelona = new Equipo
-            {
-                ID = 2,
-                Nombre = "Barcelona",
-                PartidosJugados = 10,
-                PartidosGanados = 6,
-                PartidosEmpatados = 2,
-                PartidosPerdidos = 2,
-                LOGOUrl = "https://upload.wikimedia.org/wikipedia/commons/6/6a/Barcelona_Sporting_Club_Logo.png"
-            };
-            return View(Barcelona);
-
-            Equipo Emelec = new Equipo
-            {
-                ID = 3,
-                Nombre = "Emelec",
-                PartidosJugados = 10,
-                PartidosGanados = 4,
-                PartidosEmpatados = 4,
-                PartidosPerdidos = 2,
-                LOGOUrl = "https://upload.wikimedia.org/wikipedia/commons/d/d8/Escudo_del_Club_Sport_Emelec.svg"
-            };
-            return View(Emelec);
+            EquipoRepositorio repositorio = new EquipoRepositorio();
+            var equipos = repositorio.DevuelveInfoEquipoPorID(ID);
+            return View(equipos);
 
         }
     }
